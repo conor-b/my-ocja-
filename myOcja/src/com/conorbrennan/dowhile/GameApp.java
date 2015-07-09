@@ -11,6 +11,7 @@ public class GameApp {
 		Scanner scan = new Scanner(System.in);
 		boolean playAgain = true;
 		String games ;
+		int counter = 0 ;
 		do{
 			try {
 
@@ -25,7 +26,9 @@ public class GameApp {
 				while(newGame>0){
 					System.out.println("playing game...");
 					newGame--;
+					++counter;
 				}
+				System.out.println("You've played " + counter+" game(s) this session");
 			} catch (NumberFormatException e) {
 				// TODO: handle exception
 				System.out.println("Not a valid choice ... Please pick a number");
